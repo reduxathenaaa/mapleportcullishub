@@ -1,3 +1,3 @@
-module metric_collector_6ae98e
+module metric_collector_083013
 
 go 1.22

